@@ -1,0 +1,12 @@
+.ant-carousel .slick-prev,
+.ant-carousel .slick-next {
+  color: #7e7e7e;
+  font-size: 15px;
+}
+
+.ant-carousel .slick-prev:hover,
+.ant-carousel .slick-next:hover,
+.ant-carousel .slick-prev:focus,
+.ant-carousel .slick-next:focus {
+  color: #7e7e7e;
+}

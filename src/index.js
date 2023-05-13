@@ -3,11 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import axios from 'axios';
+import { RequestProvider } from 'react-request-hook'
+import GlobalStateProvider from './provider';
+
+const axiosInstance = axios.create({
+  baseURL: 'http://localhost:8080/api/'
+})
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <RequestProvider value={axiosInstance}>
+    <GlobalStateProvider>
+      <App/>
+    </GlobalStateProvider>
+  </RequestProvider>,
   document.getElementById('root')
 );
 
